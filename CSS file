@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Color Theme CSS</title>
+    <style>
+        /* Pastel Color Palette */
+        :root {
+            --pastel-pink: #ffd6e0;
+            --pastel-blue: #c5e0f9;
+            --pastel-green: #d4f0e8;
+            --pastel-purple: #e2d4f9;
+            --pastel-peach: #ffe5d9;
+            --pastel-lavender: #e6e6ff;
+            --pastel-mint: #d4f0f0;
+            --pastel-yellow: #fff9d9;
+            --text-dark: #4a4a4a;
+            --text-light: #6c6c6c;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-purple) 100%);
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Color Palette Display */
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .color-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-dark);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .color-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-box span {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* UI Components */
+        .components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .component {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .component h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--pastel-purple);
+            color: var(--text-dark);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--pastel-blue), var(--pastel-purple));
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--pastel-green);
+            color: var(--text-dark);
+        }
+
+        .btn-accent {
+            background: var(--pastel-pink);
+            color: var(--text-dark);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            padding: 20px;
+            background: var(--pastel-blue);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(to right, var(--pastel-purple), var(--pastel-blue));
+            padding: 15px 0;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--pastel-blue);
+            border-radius: 8px;
+            background: white;
+            color: var(--text-dark);
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--pastel-purple);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--pastel-purple) 0%, var(--pastel-blue) 100%);
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            margin-top: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        footer p {
+            color: var(--text-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .color-box {
+                width: 100px;
+                height: 100px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .components {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pastel Color Theme</h1>
+            <p>Beautiful pastel colors perfect for Kashifa Kiran's AI Student Portfolio</p>
+        </header>
+
+        <div class="color-palette">
+            <div class="color-box" style="background-color: var(--pastel-pink);">
+                <span>Pastel Pink</span>
+            </div>
+            <div class="color-box" style="background-color: var(--pastel-blue);">
+                <span>Pastel Blue</span>
+            </div>
+            <div class="color-box" style="background-color: var(--pastel-green);">
+                <span>Pastel Green</span>
+            </div>
+            <div class="color-box" style="background-color: var(--pastel-purple);">
+                <span>Pastel Purple</span>
+            </div>
+            <div class="color-box" style="background-color: var(--pastel-peach);">
+                <span>Pastel Peach</span>
+            </div>
+            <div class="color-box" style="background-color: var(--pastel-lavender);">
+                <span>Pastel Lavender</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="components">
+            <div class="component">
+                <h2>Buttons</h2>
+                <a href="#" class="btn btn-primary">Primary Button</a>
+                <a href="#" class="btn btn-secondary">Secondary Button</a>
+                <a href="#" class="btn btn-accent">Accent Button</a>
+            </div>
+
+            <div class="component">
+                <h2>Cards</h2>
+                <div class="card">
+                    <div class="card-header">Project Card</div>
+                    <div class="card-body">
+                        <h3>AI Image Recognition</h3>
+                        <p>A machine learning project that identifies objects in images with high accuracy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component">
+                <h2>Form Elements</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Type your message here" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Kashifa Kiran | AI Student Portfolio</p>
+        </footer>
+    </div>
+</body>
+</html>
